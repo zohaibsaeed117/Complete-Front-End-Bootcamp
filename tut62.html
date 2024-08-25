@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON function</title>
+</head>
+
+<body>
+
+    <script>
+        a = {
+            name: 'Zohaib',
+            semester: '2nd Semeter',
+            domain:'Computer Science'
+        };
+        console.log(a);
+        newJson=JSON.stringify(a);
+        console.log(newJson);
+        newJson=newJson.replace('Zohaib','Cheema');
+        console.log(newJson);
+        newJsonString=JSON.parse(newJson);
+        console.log(newJsonString);
+    </script>
+</body>
+
+</html>

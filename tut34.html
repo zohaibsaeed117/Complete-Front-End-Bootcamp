@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+        .container{
+            display:flex;
+        }
+        .card{
+            margin: 14px 23px;
+            /* border: 2px solid red; */
+            background-color: burlywood;
+            /* box-shadow:offset-x,offset-y,color */
+            /* box-shadow:offset-x,offset-y blur-radius color */
+            /* box-shadow:offset-x,offset-y blur-radius spread-radius color */
+
+            box-shadow: 10px 13px 10px 14px green;
+            box-shadow:inset 3px 5px green;
+            box-shadow:3px 5px red,4px 6px yellow;
+        }
+        .card h1{
+            text-shadow: 3px 4px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h1>C++ Course</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nihil obcaecati deserunt quam dolorum ex distinctio saepe reprehenderit voluptas nemo itaque aperiam voluptatem consectetur suscipit architecto, unde facere id quidem maxime adipisci consequatur. Quidem?
+            </p>
+        </div>
+        <div class="card" id="card2">
+            <h1>card2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nihil obcaecati deserunt quam dolorum ex distinctio saepe reprehenderit voluptas nemo itaque aperiam voluptatem consectetur suscipit architecto, unde facere id quidem maxime adipisci consequatur. Quidem?
+            </p>
+        </div>
+        <div class="card" id="card3">
+            <h1>card3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nihil obcaecati deserunt quam dolorum ex distinctio saepe reprehenderit voluptas nemo itaque aperiam voluptatem consectetur suscipit architecto, unde facere id quidem maxime adipisci consequatur. Quidem?
+            </p>
+        </div>
+    </div>
+</body>
+</html>

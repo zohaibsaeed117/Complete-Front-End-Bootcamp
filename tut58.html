@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Set Timer and clear timer</title>
+</head>
+
+<body>
+    <div class="container">
+        <p>This is a <span id="time"></span> container</p>
+    </div>
+    <script>
+        console.log("This is a tut58");
+        // setTimeout--> Allows us to run the funciton one after the interval of time
+        // clearTimeout--> Allows us to run the funciton repeatedly after the interval of time
+        function greet(name,byeText) {
+            console.log("Hello GoodMorning! " + name + " " + byeText);
+        }
+        // setTimeout(greet, 5000,"Zaibi","TakeCare");
+        // timeout=setTimeout(greet,2000,"Zaibi","TakeCare");
+        // console.log(timeout);
+
+        // clearTimeout(timeout);
+
+        // intervalId=setInterval(greet, 1000,"Zaibi","GoodNight");
+        // clearInterval(intervalId);
+
+        function displayTime()
+        {
+            time=new Date();
+            console.log(time);
+            document.getElementById("time").innerHTML=time;
+        }
+        setInterval(displayTime,1000);
+    </script>
+</body>
+
+</html>

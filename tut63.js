@@ -1,0 +1,116 @@
+// console.log("Hello world!");
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+//   res.end('Hello World');
+  res.end(`<!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>pseudoSelector Before & After </title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Ubuntu:wght@300&display=swap"
+          rel="stylesheet">
+      <style>
+          body {
+              margin: 0px;
+              padding: 0px;
+              color: white;
+              background-color: black;
+              font-family: 'Regular 400';
+          }
+  
+          header::before {
+              content: "";
+              top: 0px;
+              left: 0px;
+              background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              z-index: -1;
+              opacity: 0.3;
+          }
+  
+          section {
+              height: 344px;
+              /* border: 2px solid red; */
+              margin: 3px 23px;
+              font-family: fira code;
+              display: flex;
+              flex-direction: column;
+              text-align: center;
+              align-items: center;
+              justify-content: center;
+          }
+  
+          /* section::before{
+              content: "This is a before content";
+          }
+          section::after{
+              content: "This is a after content";
+          } */
+  
+          .navigation {
+              display: flex;
+              font-size: 20px;
+          }
+  
+          nav ul li {
+              list-style: none;
+              padding: 20px 23px;
+          }
+  
+          nav ul li a {
+              text-decoration: none;
+              color: white;
+              font-size: 20px;
+              padding: 12px 25px;
+          }
+  
+          nav ul li a:hover {
+              border-radius: 10px 0px 10px 0px;
+              background-color: rgb(26, 22, 14);
+              color: orangered;
+          }
+  
+          h1 {
+              font-size: 4rem;
+          }
+      </style>
+  </head>
+  
+  <body>
+      <header>
+          <nav class="navbar">
+              <ul class="navigation">
+                  <li class="item"><a href="#">Home</a></li>
+                  <li class="item"><a href="#">About US</a></li>
+                  <li class="item"><a href="#">Services</a></li>
+                  <li class="item"><a href="#">Contact US</a></li>
+              </ul>
+          </nav>
+      </header>
+      <section>
+          <h1>My name is Zohaib Saeed</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat provident aliquam corporis at velit
+              voluptatem, hic totam eligendi, et facere quisquam vero odit id officiis qui amet tenetur optio soluta
+              perferendis earum harum laboriosam?</p>
+      </section>
+  </body>
+  
+  </html>`);
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
